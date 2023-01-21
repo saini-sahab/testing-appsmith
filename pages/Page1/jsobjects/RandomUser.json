@@ -1,0 +1,21 @@
+{
+  "unpublishedCollection": {
+    "name": "RandomUser",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tcurrentRandomUser: {},\n\t\n\tgetCurrent: () => {\n\t\tif ( !this.currentRandomUser.name ) {\n\t\t\treturn this.setRandomUser();\n\t\t}\n\t\t\n\t\treturn this.currentRandomUser;\n\t},\n\t\n\tsetRandomUser: () => {\n\t\tconst users = this.getUsers();\n\t\tconst rand = Math.floor(Math.random() * 10000) % users.length;\n\t\t\n\t\tthis.currentRandomUser = users[ rand ];\n\t\t\n\t\treturn this.currentRandomUser;\n\t},\n\t\n\tcheckCountry: () => {\n\t\tif ( this.getCountryOfUser() === Input1.text ) {\n\t\t\tshowAlert('You are right');\n\t\t} else {\n\t\t\tshowAlert( 'Wrong Answer. Try Again' );\n\t\t}\n\t},\n\t\n\tgetCountryOfUser() {\n\t\treturn this.getCurrent().country;\n\t},\n\t\n\tgetUsers: () => {\n\t\treturn getAllUsers.data;\n\t}\n}",
+    "variables": [
+      {
+        "name": "currentRandomUser",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_RandomUser",
+  "deleted": false,
+  "gitSyncId": "63c9231247460b73912531ba_63c93104af0003311d2290f8"
+}
