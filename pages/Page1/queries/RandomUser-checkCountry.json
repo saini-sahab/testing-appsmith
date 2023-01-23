@@ -22,7 +22,7 @@
       "body": "() => {\n  if (RandomUser.getCountryOfUser() === Input1.text) {\n    showAlert('You are right');\n  } else {\n    showAlert('Wrong Answer. Try Again');\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
